@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Banner from './Banner';
 import Stories from './Stories';
+import './fonts.css';
 import Footer from './Footer';
 import './App.css';
 
@@ -43,9 +44,12 @@ const stories = [
 const App = () => {
   return (
     <div className='App'>
-      {/* add a Header component (already created) */}
-      {/* add a Banner component (already created) */}
+      {<Header/>}
+      {<Banner/>}
       <Stories  storiesTitle="Today's Top Stories"
+                storiesImg="./story1.jpg"
+                stories={stories} />
+      <Stories  storiesTitle="Pop Culture"
                 stories={stories} />
       {/* add another Stories component with storiesTitle 'Pop Culture', and just pass down the same stories array as the above Stories component (already created but will need some editing) */}
       {/* add a Footer Component (you will need to create this component in the provided Footer.js file) */}
